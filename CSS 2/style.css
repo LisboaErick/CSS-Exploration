@@ -1,0 +1,70 @@
+#body{
+	margin: 0;
+	padding: 0;
+	background: #DCFA35;
+}
+
+.icon{
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	width: 100px;
+	height: 100px;
+	cursor: pointer;
+}
+
+.one{
+	width: 25px;
+	height: 3px;
+	border-radius: 10px;
+	background: #303030;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	transition: .4s;
+}
+.one:before, .one:after{
+	content: ' ';
+	position: absolute;
+	border-radius: 10px;
+	background: #303030;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, .2);
+	transition: .4s;
+}
+.one:before{
+	width: 20px;
+	height: 3px;
+	top: -7px;
+}
+.one:hover:before{
+  width:25px;
+}
+.one:hover:after{
+  width:25px;
+}
+
+.one:after{
+	width: 15px;
+	height: 3px;
+	top: 7px;
+}
+
+.icon.active .one{
+	background: rgba(0, 0, 0, 0);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+}
+.icon.active .one:before{
+	width: 25px;
+	height: 3px;
+	top: 0px;
+	transform: rotate(135deg);
+}
+
+.icon.active .one:after{
+	width: 25px;
+	height: 3px;
+	top: 0px;
+	transform: rotate(-135deg);
+}
