@@ -1,0 +1,82 @@
+#body{
+	margin: 0;
+	padding: 0;
+	background: #0270FF;
+}
+
+.menu{
+     position: absolute;
+     top: 15%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     width: 30px;
+     height: 30px;
+     cursor: pointer;
+}
+.menu span{
+     position: absolute;
+     display: block;
+     background: #fff;
+     width: 50%;
+     height: 4px;
+     transition: .5s;
+}
+.menu span:nth-child(even){
+     left: 50%;
+}
+.menu span:nth-child(1),
+.menu span:nth-child(2){
+     top: 0px;
+}
+.menu span:nth-child(3),
+.menu span:nth-child(4){
+     top: 12px;
+}
+.menu span:nth-child(5),
+.menu span:nth-child(6){
+     top: 24px;
+}
+
+.menu span:nth-child(1){
+     transform-origin: top left;
+ 
+}
+.menu.active span:nth-child(1){
+     transform: rotate(45deg);
+     width:58%;   
+     top: 2px;
+     left: 6px;
+}
+.menu span:nth-child(2){
+     transform-origin: top right;
+}
+.menu.active span:nth-child(2){
+     transform: rotate(-45deg);
+     top: 2px;
+     left: calc(50% - 5px);
+}
+.menu.active span:nth-child(3){
+     transform: translateX(-50px);
+     opacity: 0;
+}
+.menu.active span:nth-child(4){
+     transform: translateX(50px);
+     opacity: 0;
+}
+
+.menu span:nth-child(5){
+     transform-origin: bottom left;
+}
+.menu.active span:nth-child(5){
+     transform: rotate(-45deg);
+     bottom: 2px;
+     left: 6px;
+}
+.menu span:nth-child(6){
+     transform-origin: bottom right;
+}
+.menu.active span:nth-child(6){
+     transform: rotate(45deg);
+     bottom: 2px;
+     left: calc(50% - 5px);
+}
