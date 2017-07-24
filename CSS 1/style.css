@@ -1,0 +1,161 @@
+
+
+body{
+     margin: 0px;
+     padding: 0px;
+     background: #FF6441;
+     font: "SF Pro Display", "Montserrat", "Roboto";
+}
+/*icone*/
+.menu{
+     top: 40px;
+     left: 40px;
+     position: fixed;
+     width: 30px;
+     height: 30px;
+     z-index: 2;
+     cursor: pointer;
+}
+
+.menu span{
+     position: absolute;
+     display: block;
+     background: #fff;
+     width: 50%;
+     height: 4px;
+     transition: .5s;
+}
+
+.menu span:nth-child(even){
+     left: 50%;
+}
+
+.menu span:nth-child(1),
+.menu span:nth-child(2){
+     top: 0px;
+}
+
+.menu span:nth-child(3),
+.menu span:nth-child(4){
+     top: 10px;
+}
+
+.menu span:nth-child(5),
+.menu span:nth-child(6){
+     top: 20px;
+}
+
+.menu span:nth-child(1){
+     transform-origin: top left;
+ 
+}
+
+.menu.active span:nth-child(1){
+     transform: rotate(45deg);
+     width:58%;   
+     left: 6px;
+}
+
+.menu span:nth-child(2){
+     transform-origin: top right;
+}
+
+.menu.active span:nth-child(2){
+     transform: rotate(-45deg);
+     left: calc(50% - 5px);
+}
+
+.menu.active span:nth-child(3){
+     transform: translateX(-50px);
+     opacity: 0;
+}
+
+.menu.active span:nth-child(4){
+     transform: translateX(50px);
+     opacity: 0;
+}
+
+.menu span:nth-child(5){
+     transform-origin: bottom left;
+}
+
+.menu.active span:nth-child(5){
+     transform: rotate(-45deg);
+     left: 6px;
+}
+
+.menu span:nth-child(6){
+     transform-origin: bottom right;
+}
+
+.menu.active span:nth-child(6){
+     transform: rotate(45deg);
+     left: calc(50% - 5px);
+}
+
+
+/*menu*/
+.overlay{
+     margin: 0px;
+     padding: 0px;
+     position: fixed;
+     top: 0px;
+     left: 0%;
+     width: 100%;
+     height: 100%;
+     background: #FF6441;
+     z-index: 1;
+     opacity: 0;
+     transition: .35s ease-in-out;
+  cursor: arrow;
+  
+}
+
+.overlay.active{
+     opacity: 1;
+     overflow: auto;
+     transition: .35s ease-in-out;
+}
+
+/* aparencica do texto*/
+ul{
+     margin: 0px;
+     padding: 0px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: 3;
+}
+
+ul li{
+     list-style: none;
+     position: relative;
+}
+
+ul li a{
+     padding: 10px;
+     display: inline-block;
+     font-family: "SF Pro Display" "Montserrat";
+     font-size: 32px;
+     font-weight: 500;
+     text-decoration: none;
+     color: #FFFFFF;
+}
+
+.overlay a:after{
+     content: '';
+     display: block;
+     height: 8px;
+     background: #FF6441;
+     position: absolute;
+     width: 0%;
+     top: 33px;
+     transition: .3s ease-in-out;
+}
+
+.overlay a:hover::after{
+     width: 100%;
+     transition: .3s ease-in-out;
+}
+
